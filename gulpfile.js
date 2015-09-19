@@ -7,6 +7,7 @@ var prefix = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var plumber = require('gulp-plumber');
+var neat = require('node-neat');
 
 var paths = {
   styles: './app/styles/**/*.scss',
@@ -21,9 +22,12 @@ gulp.task('sass', function () {
     .pipe(plumber())
     .pipe(scsslint())
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(sourcemaps.write())
+    .pipe(sass({
+        outputStyle: 'expanded',
+        includePaths: neat.includePaths
+      }).on('error', sass.logError))
     .pipe(prefix())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.build))
     .pipe(browserSync.stream());
 });
@@ -36,18 +40,20 @@ gulp.task('jade', function() {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('serve', function () {
+gulp.task('serve', ['watch'], function () {
   browserSync.init({
       server: {
           baseDir: paths.build
       }
   });
+});
 
+gulp.task('watch', function() {
   gulp.watch(paths.styles, ['sass']);
   gulp.watch(paths.templates, ['jade']);
   gulp.watch(paths.buildTemplates).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['watch']);
 
 
