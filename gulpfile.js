@@ -4,6 +4,7 @@ var prefix = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var scsslint = require('gulp-scss-lint');
 var livereload = require('gulp-livereload');
+var jade = require('gulp-jade');
 
 gulp.task('sass', function () {
   gulp.src('./app/styles/**/*.scss')
@@ -20,9 +21,16 @@ gulp.task('scss-lint', function() {
     .pipe(scsslint());
 });
 
+gulp.task('jade', function() {
+  gulp.src('./app/templates/**/*.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('./build'))
+})
+
 gulp.task('watch', ['scss-lint'], function () {
-  livereload.listen();  
+  livereload.listen();
   gulp.watch('./app/styles/**/*.scss', ['sass']);
+  gulp.watch('./app/templates/**/*.jade', ['jade'])
 });
 
 gulp.task('default', ['watch']);
