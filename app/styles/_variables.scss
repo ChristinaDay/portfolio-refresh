@@ -1,1 +1,10 @@
-_variables.scss
+$alert: #f00;
+$warn: #ffa500;
+$notice: #ffff00;
+$background: #fff;
+$text-normal: #ddd;
+
+//layout
+$module-padding: 50px 0 70px 0;
+$horizontal-rule-color: #ccc;
+$horizontal-rule-border: 1px dotted $horizontal-rule-color;

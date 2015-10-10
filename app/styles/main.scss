@@ -1,10 +1,21 @@
-@import 'reset';
 @import 'bourbon';
 @import 'neat';
+@import 'variables';
+@import 'main-nav';
+@import 'hero';
+@import 'showcase';
+@import 'about';
+@import 'footer';
+
 
 body {
   font: 100% Helvetica, sans-serif;
-  background-color: #fff;
-  color: #ddd;
-  margin: 10px;
+  background-color: $background;
+  color: $text-normal;
+  margin: 0;
+}
+
+hr {
+  width: 85%;
+  border-top: $horizontal-rule-border;
 }
