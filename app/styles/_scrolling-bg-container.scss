@@ -1,6 +1,6 @@
 $parallax-window-height: 100%;
 $parallax-background-height: $parallax-window-height * 2;
-$parallax-background-color: #f5f5f5;
+$parallax-background-color: #f3f3f3;
 $parallax-background-image: url("../assets/hero-pattern.png") repeat;
 
 .parallax-window {
@@ -12,7 +12,6 @@ $parallax-background-image: url("../assets/hero-pattern.png") repeat;
 }
 
 .parallax-static-content {
-  color: #9A9A8A;
   position: relative;
   z-index: 9;
 }
@@ -27,6 +26,7 @@ $parallax-background-image: url("../assets/hero-pattern.png") repeat;
   position: absolute;
   top: - $parallax-window-height / 3;
   width: 100%;
+  opacity: 0.6;
 }
 
 

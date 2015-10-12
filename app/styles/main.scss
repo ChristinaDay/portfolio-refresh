@@ -1,11 +1,13 @@
 @import 'bourbon';
 @import 'neat';
 @import 'variables';
+@import 'typography';
 @import 'main-nav';
 @import 'scrolling-bg-container';
 @import 'showcase';
 @import 'about';
 @import 'footer';
+
 
 
 body {
@@ -180,8 +182,8 @@ hr {
 
 .overlay {
   $image-gradient-color-top: white;
-  $transparency-top: 0.5;
-  $image-gradient-color-bottom: #000;
+  $transparency-top: 0.6;
+  $image-gradient-color-bottom: transparent;
   $transparency-bottom: 0.94;
   $vertical-angle: -45deg;
     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-bottom, $transparency-bottom),

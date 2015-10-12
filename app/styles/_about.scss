@@ -5,10 +5,6 @@
 
   .bullets {
     $base-line-height: 1.5em !default;
-    $action-color: #477dca !default;
-    $dark-gray: #333 !default;
-    $base-font-color: $dark-gray !default;
-    $icon-bullet-size: 3.5em;
 
     @include display(flex);
     @include flex-wrap(wrap);
@@ -27,10 +23,12 @@
       padding: 0 10px 0 10px;
     }
 
-    h2 {
-      border-bottom: 1px solid transparentize($base-font-color, 0.8);
-      display: inline-block;
-      margin-top: 0;
+    .hero-blurb {
+      @include span-columns(6);
+
+      h2 {
+        display: inline-block;;
+      }
     }
 
     li {
@@ -38,7 +36,6 @@
     }
 
     p {
-      color: $base-font-color;
       line-height: $base-line-height;
     }
 
