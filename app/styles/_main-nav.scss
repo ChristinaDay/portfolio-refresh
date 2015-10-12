@@ -6,7 +6,6 @@
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: #fff;
-  $centered-navigation-shadow:  0px 1px 2px #ccc;
   $centered-navigation-color: transparentize($base-font-color, 0.3);
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
@@ -17,7 +16,7 @@
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
-  box-shadow: $centered-navigation-shadow;
+  border-bottom: 2px solid #ededed;
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;

@@ -3,8 +3,6 @@
 }
 
 .grid-items {
-  padding: 50px 0 75px 0;
-  @include outer-container;
   $action-color: #477DCA !default;
   $base-background-color: white !default;
   $medium-screen: em(640) !default;
@@ -24,6 +22,8 @@
   $grid-item-big-columns: 8;
   $grid-item-color: white;
   $grid-item-height: 14em;
+  border-top: $grid-item-border-size solid $grid-items-background;
+
 
   @include clearfix;
 
@@ -107,3 +107,7 @@
     background-size: cover;
   }
 }
+
+
+
+

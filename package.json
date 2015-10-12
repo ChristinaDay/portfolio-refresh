@@ -10,6 +10,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "browser-sync": "^2.9.3",
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-jade": "^1.1.0",
@@ -19,7 +20,6 @@
     "gulp-scss-lint": "^0.3.0",
     "gulp-sourcemaps": "^1.5.2",
     "node-neat": "^1.7.2",
-    "del": "^2.0.2",
     "normalize.css": "^3.0.3"
   }
 }
