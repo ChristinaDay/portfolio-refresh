@@ -1,8 +1,16 @@
 .grid-items
-  a.grid-item(href='javascript:void(0)')
-    img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png', alt='')
-    h1 Grid Item
-    p Lorem ipsum dolor sit amet, elit. Rem, illum.
+  a.grid-item.modal(href='javascript:void(0)')
+    label(for='modal-1')
+      h2.modal-trigger Click for Modal
+    input#modal-1.modal-state(type='checkbox')
+    .modal-fade-screen
+      .modal-inner
+        .modal-close(for='modal-1')
+        h1 Modal Title
+        p.modal-intro
+          | Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.
+        p.modal-content
+          | Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.
   a.grid-item.grid-item-big.grid-item-image(href='javascript:void(0)')
     img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png', alt='')
     h1 Grid Item With an Image
@@ -31,16 +39,16 @@
     p Lorem ipsum dolor sit amet, elit. Rem, illum.
 
 
-.modal
-      label(for='modal-1')
-        .modal-trigger Click for Modal
-      input#modal-1.modal-state(type='checkbox')
-      .modal-fade-screen
-        .modal-inner
-          .modal-close(for='modal-1')
-          h1 Modal Title
-          p.modal-intro
-            | Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.
-          p.modal-content
-            | Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.
+//- .modal
+//-       label(for='modal-1')
+//-         .modal-trigger Click for Modal
+//-       input#modal-1.modal-state(type='checkbox')
+//-       .modal-fade-screen
+//-         .modal-inner
+//-           .modal-close(for='modal-1')
+//-           h1 Modal Title
+//-           p.modal-intro
+//-             | Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.
+//-           p.modal-content
+//-             | Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.
 
