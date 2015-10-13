@@ -37,9 +37,8 @@ hr {
   $modal-padding: 3em;
   $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
-  $modal-image-height: 135px;
+  $modal-image-height: 14em;
   $modal-image-width: $modal-image-height;
-  $modal-trigger-image-width: 300px;
 
   label {
     cursor: pointer;
@@ -47,9 +46,7 @@ hr {
   }
 
   label img {
-    border-radius: $modal-trigger-image-width / 2;
     display: block;
-    max-width: $modal-trigger-image-width;
   }
 
   .modal-state {
@@ -57,7 +54,7 @@ hr {
   }
 
   .modal-trigger {
-    padding: 0.8em 1em;
+
   }
 
   .modal-fade-screen { // overlay
