@@ -1,8 +1,17 @@
+$grid-item-image-1: url("../assets/Blog-Article-Prototype-Mockup-med.jpg");
+$grid-item-image-2: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+$grid-item-image-3: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+$grid-item-image-4: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+$grid-item-image-5: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+$grid-item-image-6: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+$grid-item-image-7: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
+
 @mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
 
 .grid-items {
+  @include outer-container;
   $action-color: #477DCA !default;
   $base-background-color: white !default;
   $medium-screen: em(640) !default;
@@ -43,6 +52,9 @@
     text-align: center;
     text-decoration: none;
     width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
@@ -52,7 +64,7 @@
       &:nth-child(#{$i}) {
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
-        box-shadow: inset 0px 0px 1px 2px darken($background-from-list, 10%);
+        box-shadow: inset 0px 0px 1px 2px #ededed;
 
         &:focus,
         &:hover {
@@ -99,12 +111,27 @@
     }
   }
 
-  .grid-item-image {
-    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png");
-    background-color: $grid-item-background;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+// Grid Item Images
+  .grid-item-image-1 {
+    background: $grid-item-image-1;
+  }
+   .grid-item-image-2 {
+    background: $grid-item-image-2;
+  }
+   .grid-item-image-3 {
+    background: $grid-item-image-3;
+  }
+   .grid-item-image-4 {
+    background: $grid-item-image-4;
+  }
+   .grid-item-image-5 {
+    background: $grid-item-image-5;
+  }
+   .grid-item-image-6 {
+    background: $grid-item-image-6;
+  }
+   .grid-item-image-7 {
+    background: $grid-item-image-7;
   }
 
   .modal-trigger {
