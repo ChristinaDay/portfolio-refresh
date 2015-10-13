@@ -49,7 +49,7 @@ function parallax(){
 
 //modal
 $(function() {
-  $("#modal-1").on("change", function() {
+  $(".modal-input").on("change", function() {
     if ($(this).is(":checked")) {
       $("body").addClass("modal-open");
     } else {
