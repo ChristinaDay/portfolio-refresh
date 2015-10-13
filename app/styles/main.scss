@@ -37,7 +37,7 @@ hr {
   $modal-padding: 3em;
   $modal-background: $base-background-color;
   $modal-close-color: $light-gray;
-  $modal-image-height: 14em;
+  $modal-image-height: 100%;
   $modal-image-width: $modal-image-height;
 
   label {
@@ -53,10 +53,6 @@ hr {
     display: none;
   }
 
-  .modal-trigger {
-
-  }
-
   .modal-fade-screen { // overlay
     @include transition(opacity 0.25s ease);
     @include position(fixed, 0);
@@ -66,10 +62,6 @@ hr {
     text-align: left;
     visibility: hidden;
     z-index: 99999999999;
-
-    @include media($large-screen) {
-      padding-top: 10em;
-    }
 
     .modal-bg {
       @include position(absolute, 0);
@@ -110,20 +102,20 @@ hr {
     border-radius: $base-border-radius;
     margin-top: 0;
     margin: auto;
-    max-height: 95%;
+    max-height: 100%;
     overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
     width: 95%;
 
     @include media($medium-screen) {
-      max-height: 70%;
+      max-height: 100%;
       padding: $modal-padding;
-      width: 60%;
+      width: 95%;
     }
 
     @include media($large-screen) {
-      width: 50%;
+      width: 95%;
     }
 
     h1 {
