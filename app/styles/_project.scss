@@ -4,6 +4,10 @@
 
 $medium-screen: em(640) !default;
 $large-screen: em(860) !default;
+$base-font-color: rgba(128, 124, 158, 1);
+$secondary-heading-color: rgba(128, 124, 158, 0.7);
+
+
 
 .project-container {
   @include outer-container;
@@ -12,17 +16,32 @@ $large-screen: em(860) !default;
 }
 
 .image-container {
+
   img {
     margin-bottom: 50px;
-    max-width: 100%;
-    @include fill-parent();
+    max-width: 1000px;
   }
   .img-med {
-    max-width: 80%;
+    // @include span-columns(6);
+    // @include shift(3);
   }
   .img-sm {
-    @include span-columns(4);
-    @include shift(4);
+
   }
+}
+
+h3 {
+  color: $secondary-heading-color;
+  margin-bottom: 50px;
+}
+
+p {
+  margin-bottom: 70px;
+}
+
+a {
+  color: $base-font-color;
+  font-weight: bold;
+  text-decoration: underline;
 }
 

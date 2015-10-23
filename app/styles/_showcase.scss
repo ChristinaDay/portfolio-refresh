@@ -4,11 +4,13 @@ $grid-item-image-1-2: url("../assets/icons-midcentury-furniture-sm-mobile.jpg");
 $grid-item-image-2: url("../assets/icon-daruma.png");
 $grid-item-image-3: url("../assets/atxnerdyladies-sm.jpg");
 $grid-item-image-3-2: url("../assets/atxnerdyladies-sm-mobile.jpg");
-$grid-item-image-4: url("../assets/cakeday-sm.jpg");
-$grid-item-image-5: url("../assets/Blog-Article-Prototype-Mockup-sm.jpg");
-$grid-item-image-5-2: url("../assets/Blog-Article-Prototype-Mockup-sm-mobile.jpg");
-$grid-item-image-6: url("../assets/bonsai-trees1.jpg");
-$grid-item-image-7: url("../assets/hatch-banner.jpg");
+$grid-item-image-4: url("../assets/icon-daruma-sm.jpg");
+$grid-item-image-5: url("../assets/rocket-hero-sm.jpg");
+$grid-item-image-5-2: url("../assets/rocket-hero-sm-mobile.jpg");
+$grid-item-image-6: url("../assets/bonsai-sm.jpg");
+$grid-item-image-6-2: url("../assets/bonsai-sm-mobile.jpg");
+$grid-item-image-7: url("../assets/makersquare-sm.jpg");
+$grid-item-image-7-2: url("../assets/makersquare-sm-mobile.jpg");
 $grid-item-image-8: url("../assets/anyperk-sm.jpg");
 $grid-item-image-8-2: url("../assets/anyperk-sm-mobile.jpg");
 
@@ -73,14 +75,6 @@ $grid-item-image-8-2: url("../assets/anyperk-sm-mobile.jpg");
         $background-from-list: nth($grid-item-colors, $i);
         background-color: $background-from-list;
         box-shadow: inset 0px 0px 1px 2px #ededed;
-
-        // &:focus,
-        // &:hover {
-        //   background-color: darken($background-from-list, 10%);
-        //   background-repeat: no-repeat;
-        //   background-position: top;
-        //   background-size: cover;
-        // }
       }
     }
   }
@@ -146,7 +140,10 @@ $grid-item-image-8-2: url("../assets/anyperk-sm-mobile.jpg");
     background: $grid-item-image-6;
   }
    .grid-item-image-7 {
-    background: $grid-item-image-7;
+    background: $grid-item-image-7-2;
+    @include media($large-screen) {
+      background: $grid-item-image-7;
+    }
   }
   .grid-item-image-8 {
     background: $grid-item-image-8-2;
