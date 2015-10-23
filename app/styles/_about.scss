@@ -1,7 +1,12 @@
 .bullets-wrapper {
   @include outer-container;
   padding-top: 50px;
-  padding-bottom: 30px;
+
+  .hero-blurb {
+    h2 {
+      display: inline-block;;
+    }
+  }
 
   .bullets {
     $base-line-height: 1.5em !default;
@@ -20,14 +25,6 @@
       @include flex-basis(20em);
       @include flex-grow(1);
       padding: 0 10px 0 10px;
-    }
-
-    .hero-blurb {
-      @include span-columns(6);
-
-      h2 {
-        display: inline-block;;
-      }
     }
 
     li {
