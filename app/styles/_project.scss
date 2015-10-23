@@ -26,7 +26,9 @@ $secondary-heading-color: rgba(128, 124, 158, 0.7);
     // @include shift(3);
   }
   .img-sm {
-
+    max-width: 600px;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
   }
 }
 
@@ -38,6 +40,7 @@ h3 {
 
 p {
   margin-bottom: 70px;
+  line-height: 1.5;
 }
 
 a {
