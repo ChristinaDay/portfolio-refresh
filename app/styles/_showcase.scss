@@ -1,13 +1,15 @@
 // Edit Grid Item Images Here
-$grid-item-image-1: url("../assets/icons-midcentury-furniture.png");
+$grid-item-image-1: url("../assets/icons-midcentury-furniture-sm.jpg");
+$grid-item-image-1-2: url("../assets/icons-midcentury-furniture-sm-mobile.jpg");
 $grid-item-image-2: url("../assets/icon-daruma.png");
-$grid-item-image-3: url("../assets/atxnerdyladies.png");
+$grid-item-image-3: url("../assets/atxnerdyladies-sm.jpg");
+$grid-item-image-3-2: url("../assets/atxnerdyladies-sm-mobile.jpg");
 $grid-item-image-4: url("../assets/cakeday-sm.jpg");
 $grid-item-image-5: url("../assets/Blog-Article-Prototype-Mockup-med.jpg");
 $grid-item-image-6: url("../assets/bonsai-trees1.jpg");
 $grid-item-image-7: url("../assets/hatch-banner.jpg");
 $grid-item-image-8: url("../assets/anyperk-sm.jpg");
-$grid-item-image-8-mobile: url("../assets/anyperk-sm-mobile.jpg");
+$grid-item-image-8-2: url("../assets/anyperk-sm-mobile.jpg");
 
 // End Edit Grid Item Images
 
@@ -116,13 +118,19 @@ $grid-item-image-8-mobile: url("../assets/anyperk-sm-mobile.jpg");
 
 // Grid Item Images
   .grid-item-image-1 {
-    background: $grid-item-image-1;
+    background: $grid-item-image-1-2;
+    @include media($large-screen) {
+      background: $grid-item-image-1;
+    }
   }
    .grid-item-image-2 {
     background: $grid-item-image-2;
   }
    .grid-item-image-3 {
-    background: $grid-item-image-3;
+    background: $grid-item-image-3-2;
+    @include media($large-screen) {
+      background: $grid-item-image-3;
+    }
   }
    .grid-item-image-4 {
     background: $grid-item-image-4;
@@ -137,7 +145,7 @@ $grid-item-image-8-mobile: url("../assets/anyperk-sm-mobile.jpg");
     background: $grid-item-image-7;
   }
   .grid-item-image-8 {
-    background: $grid-item-image-8-mobile;
+    background: $grid-item-image-8-2;
     @include media($large-screen) {
       background: $grid-item-image-8;
     }
