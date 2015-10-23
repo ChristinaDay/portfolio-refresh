@@ -5,7 +5,10 @@ $grid-item-image-3: url("../assets/atxnerdyladies.png");
 $grid-item-image-4: url("../assets/cakeday-sm.jpg");
 $grid-item-image-5: url("../assets/Blog-Article-Prototype-Mockup-med.jpg");
 $grid-item-image-6: url("../assets/bonsai-trees1.jpg");
-$grid-item-image-7: url("../assets/hatch-banner.png");
+$grid-item-image-7: url("../assets/hatch-banner.jpg");
+$grid-item-image-8: url("../assets/anyperk-sm.jpg");
+$grid-item-image-8-mobile: url("../assets/anyperk-sm-mobile.jpg");
+
 // End Edit Grid Item Images
 
 @mixin grid-item-columns($columns) {
@@ -29,10 +32,10 @@ $grid-item-image-7: url("../assets/hatch-banner.png");
     #BDCC97,
     #979EA0;
   $grid-item-border-size: 9px;
-  $grid-item-columns: 4;
-  $grid-item-big-columns: 8;
+  $grid-item-columns: 3;
+  $grid-item-big-columns: 6;
   $grid-item-color: white;
-  $grid-item-height: 14em;
+  $grid-item-height: 18em;
   border-top: $grid-item-border-size solid $grid-items-background;
 
 
@@ -68,13 +71,13 @@ $grid-item-image-7: url("../assets/hatch-banner.png");
         background-color: $background-from-list;
         box-shadow: inset 0px 0px 1px 2px #ededed;
 
-        &:focus,
-        &:hover {
-          background-color: darken($background-from-list, 10%);
-          background-repeat: no-repeat;
-          background-position: top;
-          background-size: cover;
-        }
+        // &:focus,
+        // &:hover {
+        //   background-color: darken($background-from-list, 10%);
+        //   background-repeat: no-repeat;
+        //   background-position: top;
+        //   background-size: cover;
+        // }
       }
     }
   }
@@ -91,6 +94,10 @@ $grid-item-image-7: url("../assets/hatch-banner.png");
     margin-bottom: 0.4em;
   }
 
+  .grid-item h2, h3 {
+    color:$grid-item-color;
+  }
+
   .grid-item p {
     color: transparentize($grid-item-color, 0.3);
     line-height: 1.5em;
@@ -104,12 +111,6 @@ $grid-item-image-7: url("../assets/hatch-banner.png");
   .grid-item-big {
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
-    }
-
-    p {
-      @include media($medium-screen) {
-        max-width: 60%;
-      }
     }
   }
 
@@ -135,13 +136,16 @@ $grid-item-image-7: url("../assets/hatch-banner.png");
    .grid-item-image-7 {
     background: $grid-item-image-7;
   }
+  .grid-item-image-8 {
+    background: $grid-item-image-8-mobile;
+    @include media($large-screen) {
+      background: $grid-item-image-8;
+    }
+  }
 // End Grid Item Images
 
-  .modal-trigger {
-    color: white;
-  }
+.description {
+  display: none;
 }
-
-
-
+}
 

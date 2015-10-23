@@ -1,0 +1,17 @@
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.project-container {
+  @include outer-container;
+  padding: 50px 0 70px 0;
+  text-align: center;
+}
+
+.image-container {
+  img {
+    margin-bottom: 50px;
+    max-width: 100%;
+  }
+}
+

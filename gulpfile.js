@@ -9,16 +9,17 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var neat = require('node-neat');
 var del = require('del');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
 var paths = {
-  styles: './app/styles/**/*.scss',
-  topLevelTemplates: './app/templates/*.jade',
-  templates: './app/templates/**/*.jade',
+  assets: './app/assets/**/*',
   build: './build',
-  buildTemplates: './build/*.html'
+  styles: './app/styles/**/*.scss',
+  templates: './app/templates/**/'
 };
 
-gulp.task('sass', function () {
+gulp.task('styles', function () {
   gulp.src(paths.styles)
     .pipe(plumber())
     .pipe(scsslint())
@@ -33,12 +34,22 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('jade', function() {
-  gulp.src(paths.topLevelTemplates)
+gulp.task('templates', function() {
+  gulp.src(paths.templates + '!(_)*.jade')
     .pipe(plumber())
     .pipe(jadelint())
     .pipe(jade({pretty: true}))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest(paths.build));
+});
+
+gulp.task('images', function() {
+  gulp.src(paths.assets)
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()]
+    }))
+    .pipe(gulp.dest(paths.build + '/assets'));
 });
 
 gulp.task('serve', ['watch'], function () {
@@ -53,10 +64,11 @@ gulp.task('clean', function () {
   del(paths.build + '/**');
 });
 
-gulp.task('watch', ['sass', 'jade'], function() {
-  gulp.watch(paths.styles, ['sass']);
-  gulp.watch(paths.templates, ['jade']);
-  gulp.watch(paths.buildTemplates).on('change', browserSync.reload);
+gulp.task('watch', ['styles', 'templates', 'images'], function() {
+  gulp.watch(paths.styles, ['styles']);
+  gulp.watch(paths.assets, ['images']);
+  gulp.watch(paths.templates + '*.jade', ['templates']);
+  gulp.watch(paths.build + '/*.html', browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
