@@ -2,6 +2,9 @@
   width: (100% / 12) * $columns;
 }
 
+$medium-screen: em(640) !default;
+$large-screen: em(860) !default;
+
 .project-container {
   @include outer-container;
   padding: 50px 0 70px 0;
@@ -12,6 +15,14 @@
   img {
     margin-bottom: 50px;
     max-width: 100%;
+    @include fill-parent();
+  }
+  .img-med {
+    max-width: 80%;
+  }
+  .img-sm {
+    @include span-columns(4);
+    @include shift(4);
   }
 }
 

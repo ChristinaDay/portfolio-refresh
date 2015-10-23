@@ -5,7 +5,8 @@ $grid-item-image-2: url("../assets/icon-daruma.png");
 $grid-item-image-3: url("../assets/atxnerdyladies-sm.jpg");
 $grid-item-image-3-2: url("../assets/atxnerdyladies-sm-mobile.jpg");
 $grid-item-image-4: url("../assets/cakeday-sm.jpg");
-$grid-item-image-5: url("../assets/Blog-Article-Prototype-Mockup-med.jpg");
+$grid-item-image-5: url("../assets/Blog-Article-Prototype-Mockup-sm.jpg");
+$grid-item-image-5-2: url("../assets/Blog-Article-Prototype-Mockup-sm-mobile.jpg");
 $grid-item-image-6: url("../assets/bonsai-trees1.jpg");
 $grid-item-image-7: url("../assets/hatch-banner.jpg");
 $grid-item-image-8: url("../assets/anyperk-sm.jpg");
@@ -136,7 +137,10 @@ $grid-item-image-8-2: url("../assets/anyperk-sm-mobile.jpg");
     background: $grid-item-image-4;
   }
    .grid-item-image-5 {
-    background: $grid-item-image-5;
+    background: $grid-item-image-5-2;
+    @include media($large-screen) {
+      background: $grid-item-image-5;
+    }
   }
    .grid-item-image-6 {
     background: $grid-item-image-6;
