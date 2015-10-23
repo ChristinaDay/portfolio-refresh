@@ -8,23 +8,16 @@
     }
   }
 
-  .bullets {
-    $base-line-height: 1.5em !default;
 
-    @include display(flex);
-    @include flex-wrap(wrap);
-    margin-top: 0;
-    overflow: auto;
-    padding: 0;
-
-    &:nth-child(3) {
-      padding-right: 0;
+    .portrait {
+      @include span-columns(4);
+      padding-top: 2em;
     }
-
-    .bullet {
-      @include flex-basis(20em);
-      @include flex-grow(1);
-      padding: 0 10px 0 10px;
+    .hero-blurb {
+      @include span-columns(8);
+    }
+    .description-col1, .description-col2 {
+      @include span-columns(4 of 8);
     }
 
     li {
@@ -32,7 +25,7 @@
     }
 
     p {
-      line-height: $base-line-height;
+      line-height: 1.5;
       margin-top: 0;
     }
 
@@ -43,4 +36,4 @@
       box-shadow:  0px 2px 10px #bbb;
     }
   }
-}
+
