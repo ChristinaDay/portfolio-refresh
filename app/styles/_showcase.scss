@@ -16,6 +16,8 @@ $grid-item-image-8-2: url("../assets/anyperk-sm-mobile.jpg");
 $grid-item-image-9: url("../assets/kome-sm.jpg");
 $grid-item-image-9-2: url("../assets/kome-menuicons-sm-mobile.jpg");
 $grid-item-image-10: url("../assets/icon-ramen-sm.jpg");
+$grid-item-image-11: url("../assets/navya-sm.jpg");
+
 
 // End Edit Grid Item Images
 
@@ -162,6 +164,9 @@ $grid-item-image-10: url("../assets/icon-ramen-sm.jpg");
   }
   .grid-item-image-10 {
     background: $grid-item-image-10;
+  }
+  .grid-item-image-11 {
+    background: $grid-item-image-11;
   }
 // End Grid Item Images
 
