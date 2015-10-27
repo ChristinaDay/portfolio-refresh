@@ -160,6 +160,7 @@ $grid-item-image-11: url("../assets/navya-sm.jpg");
   }
   .grid-item-image-9 {
     background: $grid-item-image-9-2;
+    box-shadow: inset 0px 0px 1px 2px #ededed;
     @include media($large-screen) {
       background: $grid-item-image-9;
       box-shadow: inset 0px 0px 1px 2px #ededed;
